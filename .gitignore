@@ -10,3 +10,9 @@ __pycache__/
 
 # Virtual env
 venv/
+
+exports/
+
+dist/
+build/ 
+*.spec
