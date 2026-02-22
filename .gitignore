@@ -15,4 +15,6 @@ exports/
 
 dist/
 build/ 
-*.spec
+
+installer_output/
+installer.iss

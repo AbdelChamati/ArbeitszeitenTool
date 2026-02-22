@@ -2,11 +2,13 @@ import sys
 import os
 
 sys.path.append(os.path.dirname(__file__))
+
 import customtkinter as ctk
 from ui.landing import Landing
 from ui.login import Login
 from ui.register import Register
 from ui.dashboard import Dashboard
+from database import init_db  # 👈 ADD THIS
 
 
 class App(ctk.CTk):
@@ -14,11 +16,14 @@ class App(ctk.CTk):
     def __init__(self):
         super().__init__()
 
+        # Initialize database on startup
+        init_db()  # 👈 VERY IMPORTANT
+
         self.title("Arbeitszeiten Tool")
 
         # Responsive window
         self.minsize(1000, 700)
-        self.state("zoomed")  # Windows fullscreen
+        self.state("zoomed")
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
