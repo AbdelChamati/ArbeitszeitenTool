@@ -56,3 +56,26 @@ dist/
 ## Versioning
 
 Current Version: v1.0.0
+
+## Architecture
+
+This project follows a modular src-based structure:
+
+- UI Layer (CustomTkinter)
+- Business Logic (utils/)
+- Authentication (bcrypt)
+- Data Layer (SQLite)
+- Reporting (PDF / Excel)
+- Visualization (Matplotlib)
+
+The architecture separates UI, logic, and persistence to ensure scalability.
+
+## Screenshots
+
+### Login
+
+![Login](assets/screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](assets/screenshots/dashboard.png)
